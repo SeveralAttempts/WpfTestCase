@@ -3,11 +3,9 @@ C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\Te
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\TestCaseWPF.runtimeconfig.json
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\TestCaseWPF.dll
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\TestCaseWPF.pdb
-C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\TestCaseWPF_MarkupCompile.cache
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\TestCaseWPF_MarkupCompile.lref
-C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\TestCaseWPF.g.resources
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\TestCaseWPF.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\TestCaseWPF.AssemblyInfoInputs.cache
@@ -25,3 +23,14 @@ C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\ru
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg4100.dll
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\TestCaseWPF.csproj.AssemblyReference.cache
 C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\TestCase.725A7667.Up2Date
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\System.Private.Windows.Core.dll
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\TestCaseWPF.sourcelink.json
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\OpenCvSharp.Extensions.dll
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\bin\Debug\net8.0-windows\OpenCvSharp.WpfExtensions.dll
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\Views\Windows\MainWindow.g.cs
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\Views\Windows\MainWindow.baml
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\Views\Windows\HistogramWindow.g.cs
+C:\Users\coder7\source\repos\TestCaseWPF\TestCaseWPF\obj\Debug\net8.0-windows\Views\Windows\HistogramWindow.baml

@@ -9,5 +9,6 @@ namespace TestCaseWPF.Support
     internal class FilterItem
     {
         public string Filter { get; set; }
+        public ImageFilter Identifier { get; set; }
     }
 }
