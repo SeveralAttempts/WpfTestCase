@@ -5,20 +5,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:TestCaseWPF"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:TestCaseWPF.ViewModels"
     Title="{Binding HistogramWindowTitle}"
     Width="800"
     Height="450"
+    Closing="OnClosing"
     mc:Ignorable="d">
-    <Grid>
-        <Viewbox />
+    <Grid Width="800" Height="400">
         <ContentPresenter Content="{Binding HistogramCanvas}" />
-        <Canvas Margin="31,40,31,40">
-            <Rectangle
-                Canvas.Left="336"
-                Canvas.Top="144"
-                Width="66"
-                Height="66"
-                Fill="DarkRed" />
-        </Canvas>
     </Grid>
 </Window>

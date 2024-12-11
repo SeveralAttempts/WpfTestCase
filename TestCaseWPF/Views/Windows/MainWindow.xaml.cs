@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.ComponentModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,7 +24,12 @@ namespace TestCaseWPF
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel(new HistogramWindow(), new DialogService(), new ImageService());
+        }
+
+        public void OnClosing(object sender, CancelEventArgs e)
+        {
+            e.Cancel = true;
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

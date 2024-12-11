@@ -14,11 +14,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using TestCaseWPF.Services;
 using TestCaseWPF.Services.Interfaces;
-using TestCaseWPF.Support;
 using TestCaseWPF.ViewModels.Abstract;
 using OpenCvSharp.WpfExtensions;
 using OpenCvSharp;
 using TestCaseWPF.Views.Windows;
+using TestCaseWPF.Infrastructure;
+using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace TestCaseWPF.ViewModels
 {
@@ -29,12 +31,20 @@ namespace TestCaseWPF.ViewModels
         private System.Windows.Window _histogramWindow;
 
 
+        private List<int> _histGrayScaleValues;
+
+
+        public event EventHandler<HistogramEventArgs> Ids;
+
+
         private string _mainWindowTitle = "Тестовое задание";
         public string MainWindowTitle { get => _mainWindowTitle; set => Set(ref _mainWindowTitle, value); }
 
 
         public ObservableCollection<FilterItem> Filters { get; set; }
-        private Dictionary<string, ImageFormat> _possibleFormats;
+        private readonly List<string> _possibleFormats;
+
+
         public Mat SourceMat { get; set; }
         public Mat FilteredMat { get; set; }
 
@@ -81,7 +91,7 @@ namespace TestCaseWPF.ViewModels
                             string extension = Path.GetExtension(_fileSevice.File);
                             try
                             {
-                                if (_possibleFormats.ContainsKey(extension))
+                                if (_possibleFormats.Contains(extension))
                                 {
                                     if (FilteredMat is not null)
                                         FilteredMat.SaveImage(_fileSevice.File);
@@ -157,6 +167,27 @@ namespace TestCaseWPF.ViewModels
                                 FilteredMat = new Mat(SourceMat.Size(), SourceMat.Type());
                                 Cv2.CvtColor(SourceMat, FilteredMat, ColorConversionCodes.BGR2GRAY);
                                 DisplayedImage = FilteredMat.ToBitmapSource();
+                                Mat hist = new Mat();
+                                int width = SourceMat.Cols, height = SourceMat.Rows;      // set Histogram same size as source image
+                                const int histogramSize = 256;                      // you can change by urself
+                                int[] dimensions = { histogramSize };               // Histogram size for each dimension
+                                Rangef[] ranges = { new Rangef(0, 300) };
+                                Cv2.CalcHist(
+                                    images: new[] { FilteredMat },
+                                    channels: new[] { 0 },
+                                    mask: null,
+                                    hist: hist,
+                                    dims: 1,
+                                    histSize: dimensions,
+                                    ranges: ranges);
+                                hist.SaveImage("C:\\Users\\coder7\\Downloads\\1_iYqZztXZhPBHQGZU1I0AzA.png");
+                                //hist.ConvertTo(hist, MatType.CV_8UC1);
+                                _histGrayScaleValues.Clear();
+                                for (int i = 0; i < 255; i++)
+                                {
+                                    _histGrayScaleValues.Add(hist.Get<int>(i));
+                                }
+                                OnGrayScaleImageFiltered();
                             }
                             catch (ArgumentNullException)
                             {
@@ -188,17 +219,21 @@ namespace TestCaseWPF.ViewModels
             }
         }
 
+        private void OnGrayScaleImageFiltered()
+        {
+            Ids?.Invoke(this, new HistogramEventArgs(_histGrayScaleValues));
+        }
+
         public MainWindowViewModel(System.Windows.Window histogramWindow, IDialogService dialogService, IFileSevice fileSevice)
         {
             _dialogService = dialogService;
             _fileSevice = fileSevice;
             _histogramWindow = histogramWindow;
+            _histGrayScaleValues = new();
 
-            _possibleFormats = new Dictionary<string, ImageFormat>
+            _possibleFormats = new List<string>
             {
-                { ".png", ImageFormat.Png },
-                { ".jpeg", ImageFormat.Jpeg },
-                { ".bmp", ImageFormat.Bmp }
+                ".png", ".jpeg", ".bmp" 
             };
 
             Filters = new ObservableCollection<FilterItem>
