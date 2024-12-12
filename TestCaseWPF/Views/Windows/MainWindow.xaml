@@ -52,7 +52,7 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Source="{Binding DisplayedImage}"
-            Stretch="Fill" />
+            Stretch="Uniform" />
         <Button
             Width="140"
             Height="23"

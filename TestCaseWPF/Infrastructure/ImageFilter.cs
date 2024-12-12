@@ -8,7 +8,6 @@ namespace TestCaseWPF.Infrastructure
 {
     public enum ImageFilter
     {
-        BW,
         Median
     }
 }

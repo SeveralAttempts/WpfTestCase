@@ -28,13 +28,11 @@ namespace TestCaseWPF.ViewModels
     {
         private IDialogService _dialogService;
         private IFileSevice _fileSevice;
+        private IImageProcessingService<float> _imageProcessingService;
         private System.Windows.Window _histogramWindow;
 
 
-        private List<int> _histGrayScaleValues;
-
-
-        public event EventHandler<HistogramEventArgs> Ids;
+        public event EventHandler<HistogramEventArgs<float>> Ids;
 
 
         private string _mainWindowTitle = "Тестовое задание";
@@ -43,10 +41,6 @@ namespace TestCaseWPF.ViewModels
 
         public ObservableCollection<FilterItem> Filters { get; set; }
         private readonly List<string> _possibleFormats;
-
-
-        public Mat SourceMat { get; set; }
-        public Mat FilteredMat { get; set; }
 
 
         private ImageSource _imageSource;
@@ -71,8 +65,24 @@ namespace TestCaseWPF.ViewModels
                     {
                         if (_dialogService.OpenFileDialog(ref _fileSevice) == true)
                         {
-                            SourceMat = Cv2.ImRead(_fileSevice.File);
-                            DisplayedImage = SourceMat.ToBitmapSource();
+                            _imageProcessingService.SourceMat = Cv2.ImRead(_fileSevice.File, ImreadModes.Unchanged);
+                            DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
+                        }
+                        try
+                        {
+                            _imageProcessingService.FilteredMat = new Mat(_imageProcessingService.SourceMat.Size(), _imageProcessingService.SourceMat.Type());
+                            //DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
+                            _imageProcessingService.MakeHistogram();
+                            DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
+                            OnGrayScaleImageFiltered();
+                        }
+                        catch (ArgumentNullException)
+                        {
+                            MessageBox.Show("Выберите изображение");
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("Выберите изображение");
                         }
                     }));
             }
@@ -93,10 +103,10 @@ namespace TestCaseWPF.ViewModels
                             {
                                 if (_possibleFormats.Contains(extension))
                                 {
-                                    if (FilteredMat is not null)
-                                        FilteredMat.SaveImage(_fileSevice.File);
-                                    else if (SourceMat is not null)
-                                        SourceMat.SaveImage(_fileSevice.File);
+                                    if (_imageProcessingService.FilteredMat is not null)
+                                        _imageProcessingService.FilteredMat.SaveImage(_fileSevice.File);
+                                    else if (_imageProcessingService.SourceMat is not null)
+                                        _imageProcessingService.SourceMat.SaveImage(_fileSevice.File);
                                     else
                                         MessageBox.Show("Не был выбран файл изображения");
                                 }
@@ -124,7 +134,7 @@ namespace TestCaseWPF.ViewModels
                     {
                         try
                         {
-                            DisplayedImage = SourceMat.ToBitmapSource();
+                            DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
                         }
                         catch (ArgumentNullException)
                         {
@@ -155,65 +165,26 @@ namespace TestCaseWPF.ViewModels
                 return _applyFilter ??
                     (_applyFilter = new BaseCommand(o =>
                     {
-                        if (SourceMat is null)
+                        if (_imageProcessingService.SourceMat is null)
                         {
                             MessageBox.Show("Выберите изображение");
                             return;
                         }
-                        if (SelectedFilter.Identifier is ImageFilter.BW)
+                        if (SelectedFilter.Identifier is ImageFilter.Median)
                         {
                             try
                             {
-                                FilteredMat = new Mat(SourceMat.Size(), SourceMat.Type());
-                                Cv2.CvtColor(SourceMat, FilteredMat, ColorConversionCodes.BGR2GRAY);
-                                DisplayedImage = FilteredMat.ToBitmapSource();
-                                Mat hist = new Mat();
-                                int width = SourceMat.Cols, height = SourceMat.Rows;      // set Histogram same size as source image
-                                const int histogramSize = 256;                      // you can change by urself
-                                int[] dimensions = { histogramSize };               // Histogram size for each dimension
-                                Rangef[] ranges = { new Rangef(0, 300) };
-                                Cv2.CalcHist(
-                                    images: new[] { FilteredMat },
-                                    channels: new[] { 0 },
-                                    mask: null,
-                                    hist: hist,
-                                    dims: 1,
-                                    histSize: dimensions,
-                                    ranges: ranges);
-                                hist.SaveImage("C:\\Users\\coder7\\Downloads\\1_iYqZztXZhPBHQGZU1I0AzA.png");
-                                //hist.ConvertTo(hist, MatType.CV_8UC1);
-                                _histGrayScaleValues.Clear();
-                                for (int i = 0; i < 255; i++)
-                                {
-                                    _histGrayScaleValues.Add(hist.Get<int>(i));
-                                }
-                                OnGrayScaleImageFiltered();
-                            }
-                            catch (ArgumentNullException)
-                            {
-                                MessageBox.Show("Выберите изображение");
-                            }
-                            catch (NullReferenceException)
-                            {
-                                MessageBox.Show("Выберите изображение");
-                            }
-                        }
-                        else
-                        {
-                            try
-                            {
-                                FilteredMat = new Mat(SourceMat.Size(), SourceMat.Type());
-                                Cv2.MedianBlur(SourceMat, FilteredMat, 7);
-                                DisplayedImage = FilteredMat.ToBitmapSource();
+                                _imageProcessingService.MedianFilter();
+                                DisplayedImage = _imageProcessingService.FilteredMat.ToBitmapSource();
                             }
                             catch (ArgumentNullException ex)
                             {
                                 MessageBox.Show("Выберите изображение");
                             }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                            }
+                            //catch (Exception ex)
+                            //{
+                            //    MessageBox.Show(ex.Message);
+                            //}
                         }
                     }));
             }
@@ -221,24 +192,23 @@ namespace TestCaseWPF.ViewModels
 
         private void OnGrayScaleImageFiltered()
         {
-            Ids?.Invoke(this, new HistogramEventArgs(_histGrayScaleValues));
+            Ids?.Invoke(this, new HistogramEventArgs<float>(_imageProcessingService.HistGrayScaleValues, _imageProcessingService.MaxPixelDensity));
         }
 
-        public MainWindowViewModel(System.Windows.Window histogramWindow, IDialogService dialogService, IFileSevice fileSevice)
+        public MainWindowViewModel(System.Windows.Window histogramWindow, IDialogService dialogService, IFileSevice fileSevice, IImageProcessingService<float> imageProcessingService)
         {
             _dialogService = dialogService;
             _fileSevice = fileSevice;
+            _imageProcessingService = imageProcessingService;
             _histogramWindow = histogramWindow;
-            _histGrayScaleValues = new();
 
             _possibleFormats = new List<string>
             {
-                ".png", ".jpeg", ".bmp" 
+                ".png", ".jpeg", ".bmp", ".tiff", "*.tif"
             };
 
             Filters = new ObservableCollection<FilterItem>
             {
-                new FilterItem() { Filter =  "Черно-белый фильтр", Identifier = ImageFilter.BW },
                 new FilterItem() { Filter =  "Медианный фильтр", Identifier = ImageFilter.Median }
             };
 

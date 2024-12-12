@@ -21,7 +21,7 @@ namespace TestCaseWPF
             _mainWindow = new();
 
             HistogramWindowViewModel _histogram = new HistogramWindowViewModel();
-            MainWindowViewModel _main = new MainWindowViewModel(_histogramwindow, new DialogService(), new ImageService());
+            MainWindowViewModel _main = new MainWindowViewModel(_histogramwindow, new DialogService(), new ImageService(), new ImageProcessingService<float>());
 
             _histogramwindow.DataContext = _histogram;
             _mainWindow.DataContext = _main;

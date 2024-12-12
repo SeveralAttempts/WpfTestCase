@@ -16,7 +16,7 @@ namespace TestCaseWPF.Services
             OpenFileDialog openDialog = new OpenFileDialog();
             openDialog.Title = "Выберите изображение";
             openDialog.Multiselect = false;
-            openDialog.Filter = "Image Files(*.jpeg; *.png; *.bmp)|*.jpeg; *.png; *.bmp";
+            openDialog.Filter = "Image Files(*.jpeg; *.png; *.bmp; *.tiff; *.tif)|*.jpeg; *.png; *.bmp; *.tiff; *.tif";
             try
             {
                 if (openDialog.ShowDialog() == true)
@@ -37,7 +37,7 @@ namespace TestCaseWPF.Services
         {
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.Title = "Сохраните изображение";
-            saveDialog.Filter = "Image Files(*.jpeg; *.png; *.bmp)|*.jpeg; *.png; *.bmp";
+            saveDialog.Filter = "Image Files(*.jpeg; *.png; *.bmp; *.tiff; *.tif)|*.jpeg; *.png; *.bmp; *.tiff; *.tif";
             
             try
             {

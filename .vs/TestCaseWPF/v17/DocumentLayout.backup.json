@@ -3,91 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\viewmodels\\histogramwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\viewmodels\\histogramwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\services\\imageprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\services\\imageprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\viewmodels\\histogramwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\viewmodels\\histogramwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\services\\interfaces\\iimageprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\services\\interfaces\\iimageprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\infrastructure\\histogrameventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\infrastructure\\histogrameventargs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\infrastructure\\filteritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\infrastructure\\filteritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\views\\windows\\histogramwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\views\\windows\\histogramwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\views\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\views\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\views\\windows\\histogramwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\views\\windows\\histogramwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\views\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\views\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{373C9A96-3709-453E-91B1-0F2C43F85AFD}|TestHist\\TestHist.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testhist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{373C9A96-3709-453E-91B1-0F2C43F85AFD}|TestHist\\TestHist.csproj|solutionrelative:testhist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\infrastructure\\imagefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\infrastructure\\imagefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\infrastructure\\basecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\infrastructure\\basecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\viewmodels\\abstract\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\viewmodels\\abstract\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\services\\interfaces\\iitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\services\\interfaces\\iitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\services\\imagehistogramspreadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\services\\imagehistogramspreadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\services\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\services\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\coder7\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\testcasewpf.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\testcasewpf.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\services\\interfaces\\ifilesevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\services\\interfaces\\ifilesevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|c:\\users\\coder7\\source\\repos\\testcasewpf\\testcasewpf\\services\\interfaces\\idialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E450B4E-B359-4D58-9466-A260F27BE03C}|TestCaseWPF\\TestCaseWPF.csproj|solutionrelative:testcasewpf\\services\\interfaces\\idialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -97,43 +30,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FilterItem.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Infrastructure\\FilterItem.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Infrastructure\\FilterItem.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Infrastructure\\FilterItem.cs",
-              "RelativeToolTip": "TestCaseWPF\\Infrastructure\\FilterItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T11:35:08.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "HistogramEventArgs.cs",
               "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Infrastructure\\HistogramEventArgs.cs",
               "RelativeDocumentMoniker": "TestCaseWPF\\Infrastructure\\HistogramEventArgs.cs",
               "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Infrastructure\\HistogramEventArgs.cs",
               "RelativeToolTip": "TestCaseWPF\\Infrastructure\\HistogramEventArgs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T09:40:50.979Z",
+              "WhenOpened": "2024-12-12T10:56:20.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ImageProcessingService.cs",
+              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\ImageProcessingService.cs",
+              "RelativeDocumentMoniker": "TestCaseWPF\\Services\\ImageProcessingService.cs",
+              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\ImageProcessingService.cs*",
+              "RelativeToolTip": "TestCaseWPF\\Services\\ImageProcessingService.cs*",
+              "ViewState": "AgIAACEAAAAAAAAAAAASwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T10:23:19.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "HistogramWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\ViewModels\\HistogramWindowViewModel.cs",
               "RelativeDocumentMoniker": "TestCaseWPF\\ViewModels\\HistogramWindowViewModel.cs",
               "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\ViewModels\\HistogramWindowViewModel.cs",
               "RelativeToolTip": "TestCaseWPF\\ViewModels\\HistogramWindowViewModel.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwBsAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T12:23:01.275Z",
               "EditorCaption": ""
@@ -144,242 +77,24 @@
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "TestCaseWPF\\ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\ViewModels\\MainWindowViewModel.cs*",
-              "RelativeToolTip": "TestCaseWPF\\ViewModels\\MainWindowViewModel.cs*",
-              "ViewState": "AgIAABEAAAAAAAAAAAAewCEAAAAYAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "TestCaseWPF\\ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAqwLoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T07:35:03.178Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HistogramWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Views\\Windows\\HistogramWindow.xaml",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Views\\Windows\\HistogramWindow.xaml",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Views\\Windows\\HistogramWindow.xaml",
-              "RelativeToolTip": "TestCaseWPF\\Views\\Windows\\HistogramWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-10T11:57:32.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Views\\Windows\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Views\\Windows\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Views\\Windows\\MainWindow.xaml",
-              "RelativeToolTip": "TestCaseWPF\\Views\\Windows\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-09T07:08:50.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HistogramWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Views\\Windows\\HistogramWindow.xaml.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Views\\Windows\\HistogramWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Views\\Windows\\HistogramWindow.xaml.cs",
-              "RelativeToolTip": "TestCaseWPF\\Views\\Windows\\HistogramWindow.xaml.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAswBwAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "IImageProcessingService.cs",
+              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\Interfaces\\IImageProcessingService.cs",
+              "RelativeDocumentMoniker": "TestCaseWPF\\Services\\Interfaces\\IImageProcessingService.cs",
+              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\Interfaces\\IImageProcessingService.cs",
+              "RelativeToolTip": "TestCaseWPF\\Services\\Interfaces\\IImageProcessingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T11:57:51.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Views\\Windows\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Views\\Windows\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Views\\Windows\\MainWindow.xaml.cs",
-              "RelativeToolTip": "TestCaseWPF\\Views\\Windows\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAADwvyAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T07:08:46.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestHist\\Program.cs",
-              "RelativeDocumentMoniker": "TestHist\\Program.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestHist\\Program.cs",
-              "RelativeToolTip": "TestHist\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T10:29:10.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IItemService.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\Interfaces\\IItemService.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Services\\Interfaces\\IItemService.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\Interfaces\\IItemService.cs",
-              "RelativeToolTip": "TestCaseWPF\\Services\\Interfaces\\IItemService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T05:34:07.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ImageFilter.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Infrastructure\\ImageFilter.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Infrastructure\\ImageFilter.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Infrastructure\\ImageFilter.cs",
-              "RelativeToolTip": "TestCaseWPF\\Infrastructure\\ImageFilter.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T08:16:03.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BaseCommand.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Infrastructure\\BaseCommand.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Infrastructure\\BaseCommand.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Infrastructure\\BaseCommand.cs",
-              "RelativeToolTip": "TestCaseWPF\\Infrastructure\\BaseCommand.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAArwBQAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T09:26:00.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\App.xaml.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\App.xaml.cs",
-              "RelativeToolTip": "TestCaseWPF\\App.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T05:42:18.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ImageHistogramSpreadService.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\ImageHistogramSpreadService.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Services\\ImageHistogramSpreadService.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\ImageHistogramSpreadService.cs",
-              "RelativeToolTip": "TestCaseWPF\\Services\\ImageHistogramSpreadService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T05:36:11.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\ViewModels\\Abstract\\ViewModel.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\ViewModels\\Abstract\\ViewModel.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\ViewModels\\Abstract\\ViewModel.cs",
-              "RelativeToolTip": "TestCaseWPF\\ViewModels\\Abstract\\ViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T06:38:20.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DialogService.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\DialogService.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Services\\DialogService.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\DialogService.cs",
-              "RelativeToolTip": "TestCaseWPF\\Services\\DialogService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T08:06:49.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\App.xaml",
-              "RelativeDocumentMoniker": "TestCaseWPF\\App.xaml",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\App.xaml",
-              "RelativeToolTip": "TestCaseWPF\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-09T11:09:00.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ImageService.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\ImageService.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Services\\ImageService.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\ImageService.cs",
-              "RelativeToolTip": "TestCaseWPF\\Services\\ImageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T10:21:11.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ResourcePart.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
-              "ToolTip": "C:\\Users\\coder7\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAiwDcAAAAAAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T11:20:36.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TestCaseWPF.csproj",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\TestCaseWPF.csproj",
-              "RelativeDocumentMoniker": "TestCaseWPF\\TestCaseWPF.csproj",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\TestCaseWPF.csproj",
-              "RelativeToolTip": "TestCaseWPF\\TestCaseWPF.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-10T11:18:56.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IDialogService.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\Interfaces\\IDialogService.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Services\\Interfaces\\IDialogService.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\Interfaces\\IDialogService.cs",
-              "RelativeToolTip": "TestCaseWPF\\Services\\Interfaces\\IDialogService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T08:09:17.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IFileSevice.cs",
-              "DocumentMoniker": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\Interfaces\\IFileSevice.cs",
-              "RelativeDocumentMoniker": "TestCaseWPF\\Services\\Interfaces\\IFileSevice.cs",
-              "ToolTip": "C:\\Users\\coder7\\source\\repos\\TestCaseWPF\\TestCaseWPF\\Services\\Interfaces\\IFileSevice.cs",
-              "RelativeToolTip": "TestCaseWPF\\Services\\Interfaces\\IFileSevice.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T09:11:20.681Z",
+              "WhenOpened": "2024-12-12T10:14:43.343Z",
               "EditorCaption": ""
             }
           ]
