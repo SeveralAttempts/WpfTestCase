@@ -16,10 +16,13 @@ namespace TestCaseWPF.ViewModels
     {
         private string _histogramWindowTitle = "Гисторграмма";
         public string HistogramWindowTitle { get => _histogramWindowTitle; set => Set(ref _histogramWindowTitle, value); }
+        
+
+        public event EventHandler<PositionEventArgs> PositionWhenEnter;
+        public event EventHandler Restore;
 
 
         private List<float> _histGrayScaleValues;
-        private int _maxPixelDensity;
 
 
         private Canvas _histogramCanvas;
@@ -28,18 +31,40 @@ namespace TestCaseWPF.ViewModels
         public void Update(object sender, HistogramEventArgs<float> e)
         {
             _histGrayScaleValues = e.HistogramValues;
-            HistogramCanvas.Children.Clear();
             double coefMax = e.MaxDensityValue / HistogramCanvas.Height;
             for (int i = 0; i < _histGrayScaleValues.Count; i++)
             {
-                var rect = new Rectangle();
+                var rect = HistogramCanvas.Children[i] as Rectangle;
                 rect.Width = 1;
                 rect.Height = _histGrayScaleValues.ElementAt(i) / coefMax;
                 rect.Fill = Brushes.Black;
                 rect.Margin = new Thickness(i, HistogramCanvas.Height, 0, 0);
                 rect.RenderTransform = new ScaleTransform() { ScaleY = -1 };
-                HistogramCanvas.Children.Add(rect);
+                rect.MouseEnter += (s, e) =>
+                {
+                    var targetItem = s as Rectangle;
+                    targetItem.Fill = Brushes.Red;
+                    ushort position = (ushort)(HistogramCanvas.Children.IndexOf(targetItem) + 1);
+                    OnRectangleMouseEnter(position);
+
+                };
+                rect.MouseLeave += (s, e) =>
+                {
+                    var targetItem = s as Rectangle;
+                    targetItem.Fill = Brushes.Black;
+                    OnRectangleMouseLeave();
+                };
             }
+        }
+
+        private void OnRectangleMouseEnter(ushort PixelColorRange)
+        {
+            PositionWhenEnter?.Invoke(this, new PositionEventArgs() { Position = PixelColorRange, CanvasWidth = (ushort)HistogramCanvas.Width });
+        }
+
+        private void OnRectangleMouseLeave()
+        {
+            Restore?.Invoke(this, new EventArgs());
         }
 
         public HistogramWindowViewModel()
@@ -50,6 +75,10 @@ namespace TestCaseWPF.ViewModels
             HistogramCanvas.Width = 600;
             HistogramCanvas.Height = 300;
             HistogramCanvas.Background = Brushes.Lavender;
+            for (int i = 0; i < HistogramCanvas.Width; i++)
+            {
+                HistogramCanvas.Children.Add(new Rectangle());
+            }
         }
     }
 }

@@ -37,14 +37,23 @@ namespace TestCaseWPF.Services
                 HistGrayScaleValues.Add(hist.Get<T>(i));
             }
             MaxPixelDensity = HistGrayScaleValues.Max();
+        }
+
+        public void ColorPickedPixelRange((ushort start, ushort end) pixelColorRange)
+        {
             Cv2.CvtColor(SourceMat, FilteredMat, ColorConversionCodes.GRAY2BGR);
-            for (int i = 0; i < FilteredMat.Height / 2; i++)
+            FilteredMat.GetArray<Vec3w>(out var pixels);
+            for (int i = 0; i < pixels.Length; i++)
             {
-                for (int j = 0; j < FilteredMat.Width / 2; j++)
+                var vectorPixelColor = pixels[i];
+                if ((vectorPixelColor.Item0 >= pixelColorRange.start && vectorPixelColor.Item0 <= pixelColorRange.end)
+                    && (vectorPixelColor.Item1 >= pixelColorRange.start && vectorPixelColor.Item1 <= pixelColorRange.end)
+                    && (vectorPixelColor.Item2 >= pixelColorRange.start && vectorPixelColor.Item2 <= pixelColorRange.end))
                 {
-                    FilteredMat.Set<Vec3f>(i, j, new Vec3f(0f, 0.9999f, 0f));
+                    pixels[i] = new Vec3w(0, 0, 65535);
                 }
             }
+            FilteredMat.SetArray(pixels);
         }
 
         public void MedianFilter()

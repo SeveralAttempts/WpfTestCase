@@ -27,6 +27,8 @@ namespace TestCaseWPF
             _mainWindow.DataContext = _main;
 
             _main.Ids += _histogram.Update;
+            _histogram.PositionWhenEnter += _main.UpdateImageByPixels;
+            _histogram.Restore += _main.RestoreImage;
             _mainWindow.Show();
         }
     }

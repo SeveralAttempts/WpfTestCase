@@ -11,6 +11,7 @@ namespace TestCaseWPF.Services.Interfaces
     {
         void MedianFilter();
         void MakeHistogram();
+        void ColorPickedPixelRange((ushort start, ushort end) pixelColorRange);
         List<T> HistGrayScaleValues { get; set; }
         T MaxPixelDensity { get; set; }
         Mat SourceMat { get; set; }

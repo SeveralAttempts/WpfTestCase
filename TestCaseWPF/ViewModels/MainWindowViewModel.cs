@@ -195,6 +195,26 @@ namespace TestCaseWPF.ViewModels
             Ids?.Invoke(this, new HistogramEventArgs<float>(_imageProcessingService.HistGrayScaleValues, _imageProcessingService.MaxPixelDensity));
         }
 
+        public void UpdateImageByPixels(object sender, PositionEventArgs e)
+        {
+            (ushort start, ushort end) pixelColorRange;
+            pixelColorRange.end = (ushort)((ushort.MaxValue / e.CanvasWidth) * e.Position);
+            if (e.Position == 1)
+            {
+                pixelColorRange.start = 0;
+                return;
+
+            }
+            pixelColorRange.start = (ushort)((ushort.MaxValue / e.CanvasWidth) * (e.Position - 1));
+            _imageProcessingService.ColorPickedPixelRange(pixelColorRange);
+            DisplayedImage = _imageProcessingService.FilteredMat.ToBitmapSource();
+        }
+
+        public void RestoreImage(object sender, EventArgs e)
+        {
+            DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
+        }
+
         public MainWindowViewModel(System.Windows.Window histogramWindow, IDialogService dialogService, IFileSevice fileSevice, IImageProcessingService<float> imageProcessingService)
         {
             _dialogService = dialogService;
