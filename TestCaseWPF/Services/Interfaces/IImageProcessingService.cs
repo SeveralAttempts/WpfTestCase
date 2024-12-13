@@ -10,7 +10,7 @@ namespace TestCaseWPF.Services.Interfaces
     internal interface IImageProcessingService<T> where T : struct
     {
         void MedianFilter();
-        void MakeHistogram();
+        void MakeHistogram(int histogramSize);
         void ColorPickedPixelRange((ushort start, ushort end) pixelColorRange);
         List<T> HistGrayScaleValues { get; set; }
         T MaxPixelDensity { get; set; }

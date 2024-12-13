@@ -7,8 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:TestCaseWPF.ViewModels"
     Title="{Binding HistogramWindowTitle}"
-    Width="800"
-    Height="450"
+    Width="{Binding WindowWidth, Mode=TwoWay}"
+    Height="{Binding WindowHeight, Mode=TwoWay}"
     Closing="OnClosing"
     mc:Ignorable="d">
     <Window.Resources>
@@ -20,7 +20,14 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    <Grid Width="800" Height="400">
-        <ContentPresenter Content="{Binding HistogramCanvas}" />
+    <Grid
+        Width="auto"
+        Height="auto"
+        MinWidth="600"
+        MinHeight="300">
+        <ContentPresenter
+            MinWidth="600"
+            MinHeight="300"
+            Content="{Binding HistogramCanvas}" />
     </Grid>
 </Window>

@@ -17,9 +17,8 @@ namespace TestCaseWPF.Services
         public Mat SourceMat { get; set; }
         public Mat FilteredMat { get; set; }
 
-        public void MakeHistogram()
+        public void MakeHistogram(int histogramSize)
         {
-            const int histogramSize = 600;
             Mat hist = new Mat();
             int[] dimensions = { histogramSize };
             Rangef[] ranges = { new Rangef(0, ushort.MaxValue) };

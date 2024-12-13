@@ -39,6 +39,20 @@ namespace TestCaseWPF.ViewModels
         public string MainWindowTitle { get => _mainWindowTitle; set => Set(ref _mainWindowTitle, value); }
 
 
+        private double _appFontSize;
+        public double AppFontSize
+        {
+            get => _appFontSize;
+            set => Set(ref _appFontSize, value);
+        }
+
+        public double WindowWidth { get; init; }
+        public double WindowHeight { get; init; }
+
+        private double PrevWidth { get; set; }
+        private double PrevHeight { get; set; }
+
+
         public ObservableCollection<FilterItem> Filters { get; set; }
         private readonly List<string> _possibleFormats;
 
@@ -49,6 +63,9 @@ namespace TestCaseWPF.ViewModels
             get => _imageSource;
             set => Set(ref _imageSource, value); 
         }
+
+
+        //public UIElement.RenderSize RenderSize
 
 
         private FilterItem _selectedFilter;
@@ -72,7 +89,6 @@ namespace TestCaseWPF.ViewModels
                         {
                             _imageProcessingService.FilteredMat = new Mat(_imageProcessingService.SourceMat.Size(), _imageProcessingService.SourceMat.Type());
                             //DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
-                            _imageProcessingService.MakeHistogram();
                             DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
                             OnGrayScaleImageFiltered();
                         }
@@ -198,14 +214,14 @@ namespace TestCaseWPF.ViewModels
         public void UpdateImageByPixels(object sender, PositionEventArgs e)
         {
             (ushort start, ushort end) pixelColorRange;
-            pixelColorRange.end = (ushort)((ushort.MaxValue / e.CanvasWidth) * e.Position);
+            pixelColorRange.end = (ushort)Math.Ceiling((double)(ushort.MaxValue / (double)e.CanvasWidth * (double)e.Position));
             if (e.Position == 1)
             {
                 pixelColorRange.start = 0;
                 return;
 
             }
-            pixelColorRange.start = (ushort)((ushort.MaxValue / e.CanvasWidth) * (e.Position - 1));
+            pixelColorRange.start = (ushort)Math.Round((double)ushort.MaxValue / (double)e.CanvasWidth * (double)(e.Position - 1));
             _imageProcessingService.ColorPickedPixelRange(pixelColorRange);
             DisplayedImage = _imageProcessingService.FilteredMat.ToBitmapSource();
         }
@@ -233,6 +249,9 @@ namespace TestCaseWPF.ViewModels
             };
 
             SelectedFilter = Filters.ElementAt(0);
+
+            WindowWidth = 800;
+            WindowHeight = 550;
         }
     }
 }
