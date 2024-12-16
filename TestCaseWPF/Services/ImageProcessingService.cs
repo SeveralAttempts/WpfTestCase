@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +16,11 @@ namespace TestCaseWPF.Services
     {
         public List<T> HistGrayScaleValues { get; set; }
         public T MaxPixelDensity { get; set; }
-        public Mat SourceMat { get; set; }
-        public Mat FilteredMat { get; set; }
+        private List<Mat> SourceMats;
+        private List<Mat> FilteredMats;
+        private int _index;
+        public Mat Source { get => SourceMats[_index]; }
+        public Mat Filtered { get => FilteredMats[_index]; }
 
         public void MakeHistogram(int histogramSize)
         {
@@ -23,7 +28,7 @@ namespace TestCaseWPF.Services
             int[] dimensions = { histogramSize };
             Rangef[] ranges = { new Rangef(0, ushort.MaxValue) };
             Cv2.CalcHist(
-                images: new[] { SourceMat },
+                images: new[] { Source },
                 channels: new[] { 0 },
                 mask: null,
                 hist: hist,
@@ -40,8 +45,9 @@ namespace TestCaseWPF.Services
 
         public void ColorPickedPixelRange((ushort start, ushort end) pixelColorRange)
         {
-            Cv2.CvtColor(SourceMat, FilteredMat, ColorConversionCodes.GRAY2BGR);
-            FilteredMat.GetArray<Vec3w>(out var pixels);
+            FilteredMats[_index] = new Mat(Source.Size(), Source.Type());
+            Cv2.CvtColor(Source, Filtered, ColorConversionCodes.GRAY2BGR);
+            Filtered.GetArray<Vec3w>(out var pixels);
             for (int i = 0; i < pixels.Length; i++)
             {
                 var vectorPixelColor = pixels[i];
@@ -52,19 +58,48 @@ namespace TestCaseWPF.Services
                     pixels[i] = new Vec3w(0, 0, 65535);
                 }
             }
-            FilteredMat.SetArray(pixels);
+            Filtered.SetArray(pixels);
         }
 
         public void MedianFilter()
         {
-            FilteredMat = new Mat(SourceMat.Size(), SourceMat.Type());
-            Cv2.MedianBlur(SourceMat, FilteredMat, 7);
+            FilteredMats[_index] = new Mat(Source.Size(), Source.Type());
+            Cv2.MedianBlur(Source, Filtered, 7);
+        }
+
+        public void AddImage(Mat newImage)
+        {
+            SourceMats.Add(newImage);
+            FilteredMats.Add(newImage);
+            if (SourceMats.Count == 1)
+                _index = 0;
+        }
+
+        public void MoveNext()
+        {
+            _index++;
+            if (_index < 0)
+                _index = SourceMats.Count - 1;
+            else if (_index >= SourceMats.Count)
+                _index = 0;
+        }
+
+        public void MovePrev()
+        {
+            _index--;
+            if (_index < 0)
+                _index = SourceMats.Count - 1;
+            else if (_index >= SourceMats.Count)
+                _index = 0;
         }
 
         public ImageProcessingService()
         {
             HistGrayScaleValues = new List<T>();
+            SourceMats = new List<Mat>();
+            FilteredMats = new List<Mat>();
             MaxPixelDensity = default;
+            _index = -1;
         }
     }
 }

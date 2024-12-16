@@ -14,7 +14,10 @@ namespace TestCaseWPF.Services.Interfaces
         void ColorPickedPixelRange((ushort start, ushort end) pixelColorRange);
         List<T> HistGrayScaleValues { get; set; }
         T MaxPixelDensity { get; set; }
-        Mat SourceMat { get; set; }
-        Mat FilteredMat { get; set; }
+        Mat Source { get; }
+        Mat Filtered { get; }
+        void MovePrev();
+        void MoveNext();
+        void AddImage(Mat newImage);
     }
 }

@@ -65,9 +65,6 @@ namespace TestCaseWPF.ViewModels
         }
 
 
-        //public UIElement.RenderSize RenderSize
-
-
         private FilterItem _selectedFilter;
         public FilterItem SelectedFilter { get => _selectedFilter; set => Set(ref _selectedFilter, value); }
 
@@ -82,14 +79,12 @@ namespace TestCaseWPF.ViewModels
                     {
                         if (_dialogService.OpenFileDialog(ref _fileSevice) == true)
                         {
-                            _imageProcessingService.SourceMat = Cv2.ImRead(_fileSevice.File, ImreadModes.Unchanged);
-                            DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
+                            _imageProcessingService.AddImage(Cv2.ImRead(_fileSevice.File, ImreadModes.Unchanged));
+                            DisplayedImage = _imageProcessingService.Source.ToBitmapSource();
                         }
                         try
                         {
-                            _imageProcessingService.FilteredMat = new Mat(_imageProcessingService.SourceMat.Size(), _imageProcessingService.SourceMat.Type());
-                            //DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
-                            DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
+                            DisplayedImage = _imageProcessingService.Source.ToBitmapSource();
                             OnGrayScaleImageFiltered();
                         }
                         catch (ArgumentNullException)
@@ -103,6 +98,7 @@ namespace TestCaseWPF.ViewModels
                     }));
             }
         }
+
 
         private BaseCommand _saveDialogCommand;
         public BaseCommand SaveDialogCommand
@@ -119,10 +115,8 @@ namespace TestCaseWPF.ViewModels
                             {
                                 if (_possibleFormats.Contains(extension))
                                 {
-                                    if (_imageProcessingService.FilteredMat is not null)
-                                        _imageProcessingService.FilteredMat.SaveImage(_fileSevice.File);
-                                    else if (_imageProcessingService.SourceMat is not null)
-                                        _imageProcessingService.SourceMat.SaveImage(_fileSevice.File);
+                                    if (_imageProcessingService.Filtered is not null)
+                                        _imageProcessingService.Filtered.SaveImage(_fileSevice.File);
                                     else
                                         MessageBox.Show("Не был выбран файл изображения");
                                 }
@@ -140,6 +134,7 @@ namespace TestCaseWPF.ViewModels
             }
         }
 
+
         private BaseCommand _rollBackImage;
         public BaseCommand RollBackImage
         {
@@ -150,7 +145,7 @@ namespace TestCaseWPF.ViewModels
                     {
                         try
                         {
-                            DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
+                            DisplayedImage = _imageProcessingService.Source.ToBitmapSource();
                         }
                         catch (ArgumentNullException)
                         {
@@ -159,6 +154,7 @@ namespace TestCaseWPF.ViewModels
                     }));
             }
         }
+
 
         private BaseCommand _invokeHistogramWindow;
         public BaseCommand InvokeHistogramWindow
@@ -173,6 +169,39 @@ namespace TestCaseWPF.ViewModels
             }
         }
 
+
+        private BaseCommand _nextImage;
+        public BaseCommand NextImage
+        {
+            get
+            {
+                return _nextImage ??
+                    (_nextImage = new BaseCommand(o =>
+                    {
+                        _imageProcessingService.MoveNext();
+                        DisplayedImage = _imageProcessingService.Source.ToBitmapSource();
+                        OnGrayScaleImageFiltered();
+                    }));
+            }
+        }
+
+
+        private BaseCommand _previousImage;
+        public BaseCommand PreviousImage
+        {
+            get
+            {
+                return _previousImage ??
+                    (_previousImage = new BaseCommand(o =>
+                    {
+                        _imageProcessingService.MovePrev();
+                        DisplayedImage = _imageProcessingService.Source.ToBitmapSource();
+                        OnGrayScaleImageFiltered();
+                    }));
+            }
+        }
+
+
         private BaseCommand _applyFilter;
         public BaseCommand ApplyFilter
         {
@@ -181,7 +210,7 @@ namespace TestCaseWPF.ViewModels
                 return _applyFilter ??
                     (_applyFilter = new BaseCommand(o =>
                     {
-                        if (_imageProcessingService.SourceMat is null)
+                        if (_imageProcessingService.Source is null)
                         {
                             MessageBox.Show("Выберите изображение");
                             return;
@@ -191,25 +220,23 @@ namespace TestCaseWPF.ViewModels
                             try
                             {
                                 _imageProcessingService.MedianFilter();
-                                DisplayedImage = _imageProcessingService.FilteredMat.ToBitmapSource();
+                                DisplayedImage = _imageProcessingService.Filtered.ToBitmapSource();
                             }
                             catch (ArgumentNullException ex)
                             {
                                 MessageBox.Show("Выберите изображение");
                             }
-                            //catch (Exception ex)
-                            //{
-                            //    MessageBox.Show(ex.Message);
-                            //}
                         }
                     }));
             }
         }
 
+
         private void OnGrayScaleImageFiltered()
         {
             Ids?.Invoke(this, new HistogramEventArgs<float>(_imageProcessingService.HistGrayScaleValues, _imageProcessingService.MaxPixelDensity));
         }
+
 
         public void UpdateImageByPixels(object sender, PositionEventArgs e)
         {
@@ -223,13 +250,15 @@ namespace TestCaseWPF.ViewModels
             }
             pixelColorRange.start = (ushort)Math.Round((double)ushort.MaxValue / (double)e.CanvasWidth * (double)(e.Position - 1));
             _imageProcessingService.ColorPickedPixelRange(pixelColorRange);
-            DisplayedImage = _imageProcessingService.FilteredMat.ToBitmapSource();
+            DisplayedImage = _imageProcessingService.Filtered.ToBitmapSource();
         }
+
 
         public void RestoreImage(object sender, EventArgs e)
         {
-            DisplayedImage = _imageProcessingService.SourceMat.ToBitmapSource();
+            DisplayedImage = _imageProcessingService.Source.ToBitmapSource();
         }
+
 
         public MainWindowViewModel(System.Windows.Window histogramWindow, IDialogService dialogService, IFileSevice fileSevice, IImageProcessingService<float> imageProcessingService)
         {
